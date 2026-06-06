@@ -1,0 +1,189 @@
+{
+  "info": {
+    "_postman_id": "1bcc98f1-8a8b-44d1-bd2f-f91998948660",
+    "name": "Examen Final API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55229285"
+  },
+  "item": [
+    {
+      "name": "Users - Create",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"User_{{$randomInt}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5043/api/Users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5043",
+          "path": [
+            "api",
+            "Users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Users - Get All",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5043/api/Users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5043",
+          "path": [
+            "api",
+            "Users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Products - Create",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Mouse\",\n  \"price\": 100,\n  \"stock\": 50\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5043/api/Products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5043",
+          "path": [
+            "api",
+            "Products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Products - Get All",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5043/api/Products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5043",
+          "path": [
+            "api",
+            "Products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Carrito - Add Product",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5043/api/Carrito/42be1b74-ee6a-4d3a-b8f6-d8cefd182cb6/add?productId=1&cantidad=1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5043",
+          "path": [
+            "api",
+            "Carrito",
+            "42be1b74-ee6a-4d3a-b8f6-d8cefd182cb6",
+            "add"
+          ],
+          "query": [
+            {
+              "key": "productId",
+              "value": "1"
+            },
+            {
+              "key": "cantidad",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Carrito - Get By User",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5043/api/Carrito/usuario/42be1b74-ee6a-4d3a-b8f6-d8cefd182cb6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5043",
+          "path": [
+            "api",
+            "Carrito",
+            "usuario",
+            "42be1b74-ee6a-4d3a-b8f6-d8cefd182cb6"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Carrito - Checkout Async",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5043/api/Carrito/checkout-async?userId=42be1b74-ee6a-4d3a-b8f6-d8cefd182cb6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5043",
+          "path": [
+            "api",
+            "Carrito",
+            "checkout-async"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "42be1b74-ee6a-4d3a-b8f6-d8cefd182cb6"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
